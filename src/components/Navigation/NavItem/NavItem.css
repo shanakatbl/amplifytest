@@ -1,0 +1,9 @@
+.NavItem a{
+    color:gray;
+    text-decoration:none;
+}
+
+.NavItem a.active div{
+    background-color: lightblue;
+
+}

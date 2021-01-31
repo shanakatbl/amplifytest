@@ -1,8 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+//import * as serviceWorker from './serviceWorker';
+//import Settings from './layout/Settings'
 
 import Amplify from 'aws-amplify';
 import config from './aws-exports';
@@ -11,7 +15,13 @@ Amplify.configure(config);
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+  <BrowserRouter>
+    <Switch>
+
+      <Route path="/index" component={App} />
+    </Switch>
+    {<App />}
+  </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
